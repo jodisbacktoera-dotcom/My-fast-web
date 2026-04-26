@@ -61,30 +61,32 @@ export default async function (eleventyConfig) {
   eleventyConfig.addCollection('tagList', tagList);
 
   // ---------------------  Plugins
-  eleventyConfig.addPlugin(plugins.htmlConfig);
-  eleventyConfig.addPlugin(plugins.drafts);
+eleventyConfig.addPlugin(plugins.htmlConfig);
+eleventyConfig.addPlugin(plugins.drafts);
 
-  eleventyConfig.addPlugin(plugins.EleventyRenderPlugin);
-  eleventyConfig.addPlugin(plugins.rss);
-  eleventyConfig.addPlugin(plugins.syntaxHighlight);
+eleventyConfig.addPlugin(plugins.EleventyRenderPlugin);
+eleventyConfig.addPlugin(plugins.rss);
+eleventyConfig.addPlugin(plugins.syntaxHighlight);
 
-  eleventyConfig.addPlugin(plugins.webc, {
-    components: ['./src/_includes/webc/**/*.webc'],
-    useTransform: true
-  });
+eleventyConfig.addPlugin(plugins.webc, {
+components: ['./src/_includes/webc/**/*.webc'],
+useTransform: true
+});
 
-  eleventyConfig.addPlugin(plugins.eleventyImageTransformPlugin, {
-    formats: ['webp', 'jpeg'],
-    widths: ['auto'],
-    htmlOptions: {
-      imgAttributes: {
-        loading: 'lazy',
-        decoding: 'async',
-        sizes: 'auto'
-      },
-      pictureAttributes: {}
-    }
-  });
+// ❌ Image plugin disabled (Termux me error deta hai)
+//   eleventyConfig.addPlugin(plugins.eleventyImageTransformPlugin, {
+//     formats: ['webp', 'jpeg'],
+//     widths: ['auto'],
+//     htmlOptions: {
+//       imgAttributes: {
+//         loading: 'lazy',
+//         decoding: 'async',
+//         sizes: 'auto'
+//       },
+//       pictureAttributes: {}
+//     }
+//   });
+
 
   // ---------------------  bundle
   eleventyConfig.addBundle('css', {hoist: true});

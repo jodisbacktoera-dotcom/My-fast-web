@@ -1,4 +1,4 @@
-import Image from '@11ty/eleventy-img';
+//import Image from '@11ty/eleventy-img';
 import path from 'node:path';
 import fs from 'fs';
 

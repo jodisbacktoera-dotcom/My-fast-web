@@ -1,6 +1,6 @@
 import {promises as fsPromises, existsSync} from 'node:fs';
 import path from 'node:path';
-import Image from '@11ty/eleventy-img';
+//import Image from '@11ty/eleventy-img';
 
 const ogImagesDir = './src/assets/og-images';
 
