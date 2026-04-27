@@ -2,69 +2,31 @@
 
 <!doctype html>
 <html lang="{{ meta.lang }}">
-  <!-- The order of elements in the head follows recommendations by Harry Roberts. learn more here: https://www.youtube.com/watch?v=MHyAOZ45vnU -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <head>
-    <!-- 1 charset/viewport -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- 2 title -->
-    <title>
-      {%- if title -%}
-        {{- title -}}
-      {%- else -%}
-        {{- meta.siteName -}}
-      {%- endif -%}
-    </title>
-
-    <base href="{{ page.url }}" />
-
-    <!-- 3 synchronous js  -->
-    {% include "head/js-inline.njk" %}
-
-    <!-- 4 schema settings -->
-    {% include "head/schema.njk" %}
-
-    <!-- 5 CSS  -->
-    <!-- <link rel="stylesheet" href="/assets/css/global.css?{{ assetHash }}" /> -->
-    {% include "head/css-inline.njk" %}
-    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
-
-    <!-- 6 preloads  -->
-    {% include "head/preloads.njk" %}
-
-    <!-- 7 defer  -->
-    {% include "head/js-defer.njk" %}
-    <script src="/pagefind/pagefind-ui.js"></script>
-
-    <!-- 8 meta tags, icons, open graph etc.  -->
-    {% include "head/meta-info.njk" %}
-
-    <!-- 9 Analytics (production only) -->
-    {%- if meta.analytics.fathom.siteId and eleventy.env.runMode == "build" -%}
-    <script src="https://cdn.usefathom.com/script.js" data-site="{{ meta.analytics.fathom.siteId }}" defer></script>
-    <script src="/assets/scripts/outbound-tracking.js" defer></script>
-    {%- endif -%}
-  </head>
-
-  <body class="{{ layout }}">
-    {% set indicateActiveHome %}
-      {% if page.url == "/" %}
-        aria-current=page
-      {% endif %}
-    {% endset %}
-    {% include "partials/header.njk" %}
-
-    {%- if meta.carbonAds.enabled and eleventy.env.runMode == "build" -%}
-    <div class="site-content sidebar" data-direction="rtl">
-      <main id="main" class="flow">{{ content | safe }}</main>
-      {% include "partials/carbon-ad.njk" %}
-    </div>
+  <title>
+    {%- if title -%}
+      {{- title -}}
     {%- else -%}
-    <main id="main" class="flow">{{ content | safe }}</main>
+      {{- meta.siteName -}}
     {%- endif -%}
+  </title>
 
-    {% include "partials/footer.njk" %}
-  </body>
+  <!-- CSS -->
+  {% include "head/css-inline.njk" %}
+
+  <!-- Meta -->
+  {% include "head/meta-info.njk" %}
+</head>
+
+<body style="margin:0; padding:0; background:#0b1220; color:white; font-family:sans-serif;">
+
+  <!-- MAIN CONTENT ONLY -->
+  <main style="max-width:900px; margin:auto; padding:40px;">
+    {{ content | safe }}
+  </main>
+
+</body>
 </html>
