@@ -6,7 +6,8 @@
   "license": "ISC",
   "type": "module",
   "engines": {
-    "node": ">=22"
+  "node": "18.x"
+  }
   },
   "scripts": {
     "clean": "rimraf dist src/_includes/css src/_includes/scripts",
