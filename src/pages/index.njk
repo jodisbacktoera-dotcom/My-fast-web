@@ -1,12 +1,134 @@
 ---
 layout: base
 permalink: /index.html
-title: 'Satyarth Portfolio'
+title: 'Satyarth | Frontend Developer Portfolio'
+description: 'Official portfolio of Satyarth. Frontend developer, Instagram satyarthaofficial.'
 ---
 
-<h1>Satyarth Portfolio 🚀</h1>
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f172a;
+  color: white;
+  overflow-x: hidden;
+}
 
-<p>Welcome to my personal website ✨</p>
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-<a href="#">My Projects</a><br><br>
-<a href="#">Contact Me</a>
+/* TEXT */
+h1 {
+  font-size: 60px;
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* TYPING */
+.typing {
+  font-size: 20px;
+  border-right: 2px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(30) forwards, blink .7s infinite;
+}
+
+@keyframes typing {
+  to { width: 260px; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* BUTTON */
+.btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(90deg, #6366f1, #38bdf8);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* SECTION */
+.section {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+/* CARDS */
+.card {
+  background: #1e293b;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 12px;
+  display: inline-block;
+  width: 250px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* SOCIAL */
+a {
+  color: #38bdf8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  h1 { font-size: 35px; }
+}
+</style>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Hi, I'm Satyarth 🚀</h1>
+  <div class="typing">Frontend Developer 💻</div>
+
+  <a href="#contact" class="btn">Contact Me</a>
+</div>
+
+<!-- PROJECTS -->
+<div class="section">
+  <h2>My Projects 💼</h2>
+
+  <div class="card">
+    <h3>Portfolio Website</h3>
+    <p>My personal portfolio</p>
+  </div>
+
+  <div class="card">
+    <h3>Weather App</h3>
+    <p>Live weather project</p>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section">
+  <h2>Contact Me 📩</h2>
+
+  <p>Email: <a href="mailto:jodisbacktoera@gmail.com">jodisbacktoera@gmail.com</a></p>
+
+  <p>
+    Instagram: 
+    <a href="https://instagram.com/satyarthaofficial" target="_blank">
+      @satyarthaofficial
+    </a>
+  </p>
+</div>
