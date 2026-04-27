@@ -1,7 +1,7 @@
 export const url = process.env.URL || 'http://localhost:8080';
 // Extract domain from `url`
 export const domain = new URL(url).hostname;
-export const siteName = 'Remote In Tech';
+export const siteName = 'satyarth profiles';
 export const siteDescription = 'A list of semi to fully remote-friendly companies in or around tech';
 export const siteType = 'WebSite'; // schema
 export const locale = 'en_EN';
@@ -11,8 +11,8 @@ export const author = {
   name: 'Remote In Tech Community'
 };
 export const creator = {
-  name: 'Doug Aitken',
-  email: 'doug@dougaitken.co.uk',
+  name: 'satyarth',
+  email: 'jodisbacktoera@gmail.com',
   website: 'https://dougaitken.link'
 };
 export const pathToSvgLogo = 'src/assets/svg/misc/logo.svg'; // used for favicon generation
@@ -21,11 +21,11 @@ export const themeLight = '#F5F7FF'; // used for meta tag theme-color, if light 
 export const themeDark = '#090E1A'; // used for meta tag theme-color, if dark colors are prefered. best use value set for dark bg
 export const opengraph_default = '/assets/images/template/opengraph-default.jpg'; // fallback/default meta image
 export const opengraph_default_alt =
-  "Remote In Tech - A list of semi to fully remote-friendly companies in or around tech"; // alt text for default meta image"
+  "My personal portfolio website"; // alt text for default meta image"
 export const blog = {
   // RSS feed
-  name: 'Remote In Tech',
-  description: 'A list of semi to fully remote-friendly companies in or around tech',
+  name: 'satyarth',
+  description: '"My personal portfolio website"',
   // feed links are looped over in the head. You may add more to the array.
   feedLinks: [
     {
