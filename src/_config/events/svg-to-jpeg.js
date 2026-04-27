@@ -5,7 +5,7 @@ import Image from '@11ty/eleventy-img';
 const ogImagesDir = './src/assets/og-images';
 
 export const svgToJpeg = async () => {
-  const socialPreviewImagesDir = 'dist/assets/og-images/';
+  const socialPreviewImagesDir = '_site/assets/og-images/';
 
   if (!existsSync(socialPreviewImagesDir)) {
     console.log('⚠ No OG images dir found');
