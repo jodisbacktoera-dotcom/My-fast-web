@@ -103,9 +103,74 @@ a {
 
   <a href="#contact" class="btn">Contact Me</a>
 </div>
+ <!-- 🔥 Subprice Button -->
+<div style="text-align:center; margin-top:40px;">
+  <button class="subprice-btn" onclick="openPopup()">🔥 Subprice</button>
+</div>
 
+<!-- 🔥 Popup -->
+<div id="popup" class="popup">
+  <span class="close" onclick="closePopup()">✖</span>
+  <img src="/assets/images/subprice.jpg" alt="Subprice Image">
+</div>
+
+<style>
+.subprice-btn {
+  padding: 14px 28px;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+  cursor: pointer;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255,75,43, 0.7); }
+  70% { box-shadow: 0 0 0 20px rgba(255,75,43, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,75,43, 0); }
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup img {
+  max-width: 90%;
+  border-radius: 12px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+</style>
+
+<script>
+function openPopup() {
+  document.getElementById("popup").style.display = "flex";
+}
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+</script>
 <!-- CONTACT -->
 <div id="contact" class="section">
+
   <h2>Contact Me 📩</h2>
 
   <p>Email: <a href="mailto:jodisbacktoera@gmail.com">jodisbacktoera@gmail.com</a></p>
